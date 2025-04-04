@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Believe n Beans</title>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="logo.jpg" alt="Believe n Beans Logo"></a>
+  </div>
+  <nav class="nav-links">
+	<a href="index.html">HOME</a>
+    <a href="menu.html">MENU</a>
+    <a href="#">WORK WITH US</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="#">REWARDS</a>
+  </nav>
+</header>
+
+<section class="section green">
+<div class="indexSection1">
+<h1 class="indexH1">COFFEE ALWAYS A GOOD IDEA</h1>
+<button type="button" class="indexButton">Learn More</button>
+</div>
+
+<div class="indexSection2">
+<img src="coffee.jpg" height="100%" width="100%">
+</div>
+</section>
+
+<section class="section blue index">
+<div class="slideshow-container">
+
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 3</div>
+			<img src="cafe1.jpg" style="width:100%">
+			<div class="text">Caption Text</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 3</div>
+			<img src="cafe2.jpg" style="width:100%">
+			<div class="text">Caption Two</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 3</div>
+			<img src="cafe3.jpg" style="width:100%">
+			<div class="text">Caption Three</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+<br>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>    
+</section>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</HTML>
